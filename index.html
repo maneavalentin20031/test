@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Betaald krijgen om te spelen en scrollen</title>
   <link rel="icon" href="data:,">
-  <meta name="description" content="Download. Scroll & test games. Direct betaald." />
+  <meta name="description" content="Ontgrendel een aanbieding voor toegang tot de Scroll & Verdien aanbieding." />
   <link rel="preload" as="image" href="assets/freecash-logo.webp" />
   <link rel="preload" as="image" href="assets/tiktok-logo.webp" />
   <link rel="preload" as="image" href="assets/play-button.webp" />
@@ -114,7 +114,6 @@
     .cta-text strong { font-size: 16px; font-weight: 700; color: #ffffff; line-height: 1.25; white-space: nowrap; }
     .cta-text span { font-size: 12px; font-weight: 400; color: rgba(255,255,255,0.72); white-space: nowrap; }
 
-    /* ACTIVATION BOX */
     .activation-box {
       width: 100%;
       background: #1a1208;
@@ -141,29 +140,12 @@
       display: flex;
       align-items: flex-start;
       gap: 12px;
-      padding: 16px 16px 16px 16px;
+      padding: 16px;
     }
-    .activation-lock {
-      font-size: 22px;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-    .activation-title {
-      font-size: 14px;
-      font-weight: 800;
-      color: #ffffff;
-      margin-bottom: 6px;
-      padding-right: 70px;
-    }
-    .activation-text {
-      font-size: 13px;
-      color: #a09070;
-      line-height: 1.6;
-    }
-    .activation-highlight {
-      color: var(--yellow);
-      font-weight: 700;
-    }
+    .activation-lock { font-size: 22px; flex-shrink: 0; margin-top: 1px; }
+    .activation-title { font-size: 14px; font-weight: 800; color: #ffffff; margin-bottom: 6px; padding-right: 70px; }
+    .activation-text { font-size: 13px; color: #a09070; line-height: 1.6; }
+    .activation-highlight { color: var(--yellow); font-weight: 700; }
 
     .section-label {
       font-size: 10.5px;
@@ -188,7 +170,6 @@
     }
     .offer-play-circle { width: 46px; height: 46px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
     .offer-play-circle img { width: 46px; height: 46px; object-fit: contain; }
-    .play-fallback { display: none; fill: #ffffff; width: 15px; height: 15px; margin-left: 3px; }
     .offer-info { flex: 1; min-width: 0; }
     .offer-title-row { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; flex-wrap: wrap; }
     .offer-title { font-weight: 700; font-size: 14px; color: #fff; }
@@ -199,79 +180,64 @@
     .offer-stars { display: flex; align-items: center; gap: 3px; font-size: 11px; font-weight: 500; color: var(--yellow); }
     .offer-stars svg { width: 11px; height: 11px; fill: var(--yellow); flex-shrink: 0; }
     .offer-arrow { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: var(--muted); font-size: 17px; }
+    
     .steps { display: flex; flex-direction: column; gap: 14px; width: 100%; margin-bottom: 44px; }
-    .step-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 18px 18px 16px; display: flex; gap: 14px; align-items: flex-start; }
+    .step-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 18px; display: flex; gap: 14px; align-items: flex-start; }
     .step-icon { width: 40px; height: 40px; border-radius: 10px; background: rgba(44, 199, 110, 0.12); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
     .step-icon svg { width: 20px; height: 20px; stroke: var(--green); fill: none; }
     .step-body { flex: 1; }
     .step-title { font-weight: 700; font-size: 14px; color: #fff; margin-bottom: 5px; line-height: 1.35; }
     .step-desc { font-size: 13px; font-weight: 400; color: var(--muted); line-height: 1.55; margin-bottom: 10px; }
     .step-desc .hi { color: var(--green); font-weight: 500; }
-    .step-tag { display: inline-block; border: 1px solid rgba(44, 199, 110, 0.35); border-radius: 6px; padding: 4px 10px; font-size: 10.5px; font-weight: 600; color: rgba(44, 199, 110, 0.6); letter-spacing: 0.06em; text-transform: uppercase; }
+    .step-tag { display: inline-block; border: 1px solid rgba(44, 199, 110, 0.35); border-radius: 6px; padding: 4px 10px; font-size: 10.5px; font-weight: 600; color: rgba(44, 199, 110, 0.6); text-transform: uppercase; }
+    
     footer { display: flex; flex-direction: column; align-items: center; gap: 7px; }
     .footer-links { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
     .footer-links a { font-size: 12px; color: var(--muted); text-decoration: none; }
-    .footer-links a:hover { color: var(--text); }
     .footer-copy { font-size: 12px; color: var(--muted); }
 
-    /* AGE GATE STYLES - DIN AGE-GATE.HTML */
+    /* AGE GATE STYLES */
     #age-gate-section { background: #050a05; width: 100%; min-height: 100vh; display: flex; justify-content: center; align-items: center; position: fixed; top: 0; left: 0; z-index: 9999; }
-    .app-icon { width: 76px; height: 76px; border-radius: 20px; overflow: hidden; display: flex; align-items: center; justify-content: center; margin-bottom: 22px; box-shadow: 0 0 32px rgba(44,199,110,0.18); }
-    .app-icon img { width: 76px; height: 76px; object-fit: cover; }
-    .gate-badge { display: inline-flex; align-items: center; gap: 7px; background: rgba(44,199,110,0.12); border: 1.5px solid rgba(44,199,110,0.35); border-radius: 999px; padding: 7px 18px; font-size: 11px; font-weight: 700; color: var(--green); text-transform: uppercase; margin-bottom: 26px; }
-    .info-card { width: 100%; background: #0d1a0e; border: 1.5px solid #1a3a1c; border-radius: 16px; padding: 20px 18px; margin-bottom: 28px; text-align: left; }
-    .btn-yes { display: block; width: 100%; background: var(--green); color: #ffffff; border: none; border-radius: 14px; padding: 16px 24px; font-size: 16px; font-weight: 700; cursor: pointer; text-decoration: none; margin-bottom: 10px; text-align: center; }
-    .btn-no { display: block; width: 100%; background: transparent; color: #7a9880; border: 1.5px solid #1f3522; border-radius: 14px; padding: 15px 24px; font-size: 15px; font-weight: 500; cursor: pointer; text-decoration: none; text-align: center; }
-    
+    .gate-container { width: 100%; max-width: 420px; padding: 52px 24px; display: flex; flex-direction: column; align-items: center; text-align: center; }
+    .gate-btn-yes { display: block; width: 100%; background: var(--green); color: #fff; border: none; border-radius: 14px; padding: 16px; font-size: 16px; font-weight: 700; cursor: pointer; margin-bottom: 10px; text-align: center; text-decoration: none; }
+    .gate-btn-no { display: block; width: 100%; background: transparent; color: #7a9880; border: 1.5px solid #1f3522; border-radius: 14px; padding: 15px; font-size: 15px; text-decoration: none; text-align: center; }
     .hidden { display: none !important; }
   </style>
 </head>
 <body>
 
   <section id="age-gate-section" class="hidden">
-    <div class="page" style="max-width: 420px;">
-      <div class="app-icon"><img src="assets/freecash-logo.webp" alt="FreeCash" /></div>
-      <div class="gate-badge">Scroll FYP Aanbieding</div>
-      <h1 style="font-size: clamp(32px, 9vw, 44px); font-weight: 900; margin-bottom: 10px; color: #fff;">BEN JE <span class="accent">21+</span>?</h1>
-      <p class="subtext">Verdien echt geld met scrollen.</p>
-      <div class="info-card">
-        <div style="font-size: 11px; font-weight: 700; color: var(--green); margin-bottom: 16px; text-transform: uppercase;">Belangrijk – lees dit even</div>
-        <p style="font-size: 13.5px; color: #b8cbbf; line-height: 1.55;">Je moet <strong>minimaal 21 jaar oud</strong> zijn om de Scroll & Verdien aanbieding te ontgrendelen.</p>
+    <div class="gate-container">
+      <div style="width: 76px; height: 76px; border-radius: 20px; overflow: hidden; margin-bottom: 22px;">
+        <img src="assets/freecash-logo.webp" alt="FreeCash" style="width: 100%; height: 100%; object-fit: cover;" />
       </div>
-      <button class="btn-yes" onclick="unlockContent()">Ja, ik ben 21 of ouder</button>
-      <a href="blocked.html" class="btn-no">Nee, ik ben jonger dan 21</a>
+      <h1 class="headline">BEN JE <span class="accent">21+</span>?</h1>
+      <p class="subtext">Verdien echt geld met scrollen.</p>
+      <div class="activation-box" style="background: #0d1a0e; border-color: #1a3a1c; text-align: left;">
+        <div style="font-size: 11px; font-weight: 700; color: var(--green); margin-bottom: 12px; text-transform: uppercase;">Belangrijk – lees dit even</div>
+        <div style="font-size: 13.5px; color: #b8cbbf; line-height: 1.55;">Je moet <strong>minimaal 21 jaar oud</strong> zijn om de Scroll & Verdien aanbieding te ontgrendelen.</div>
+      </div>
+      <button class="gate-btn-yes" onclick="unlockContent()">Ja, ik ben 21 of ouder</button>
+      <a href="blocked.html" class="gate-btn-no">Nee, ik ben jonger dan 21</a>
     </div>
   </section>
 
   <div id="main-content" class="page hidden">
     <div class="logos">
-      <div class="logo-box logo-freecash">
-        <img src="assets/freecash-logo.webp" alt="Freecash" />
-      </div>
+      <div class="logo-box"><img src="assets/freecash-logo.webp" alt="Freecash" style="width: 54px;" /></div>
       <span class="logo-sep">×</span>
-      <div class="logo-box logo-tiktok">
-        <img src="assets/tiktok-logo.webp" alt="TikTok" />
-      </div>
+      <div class="logo-box" style="background: #010101;"><img src="assets/tiktok-logo.webp" alt="TikTok" style="width: 36px;" /></div>
     </div>
 
     <div class="badge">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-        <polyline points="22 4 12 14.01 9 11.01"/>
-      </svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
       Je komt in aanmerking
     </div>
 
-    <h1 class="headline">
-      Betaald krijgen om te <span class="accent">Scrollen</span><br>
-      en te <span class="accent">Verdienen</span>
-    </h1>
-    <p class="subtext">Scroll & Verdien. Test games. Direct betaald.</p>
+    <h1 class="headline">Betaald krijgen om te <span class="accent">Scrollen</span><br>en te <span class="accent">Verdienen</span></h1>
+    <p class="subtext">Ontgrendel een aanbieding voor toegang tot de Scroll & Verdien aanbieding.</p>
 
-    <a href="https://taptrackr.com/r/eyJ0IjoiZnJlZWNhc2gtY3BpIiwidSI6IjY5YmM4Y2RkMmM1YWQyMDZmZmMyNGVjOSIsInRzIjoxNzc2MzIzNTI2MzQyfQ" class="cta-btn" target="_blank" rel="noopener noreferrer">
-      <svg class="cta-apple" viewBox="0 0 24 24">
-        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-      </svg>
+    <a href="https://gypsyniggaaffiliatelink.com" class="cta-btn" target="_blank">
       <div class="cta-text">
         <strong>Scroll & Verdien Nu</strong>
         <span>iOS & Android</span>
@@ -280,22 +246,17 @@
 
     <span class="section-label">Uitgelichte aanbiedingen</span>
     <div class="offer-card">
-      <div class="offer-play-circle">
-        <img src="assets/play-button.webp" alt="Play" />
-      </div>
+      <div class="offer-play-circle"><img src="assets/play-button.webp" alt="Play" /></div>
       <div class="offer-info">
         <div class="offer-title-row">
           <span class="offer-title">Scroll & Verdien met FreeCash</span>
           <span class="offer-rate">€149/UUR</span>
         </div>
-        <div class="offer-sub">Verdien geld met scrollen</div>
+        <div class="offer-sub">Verdien geld met je feed</div>
       </div>
       <div class="offer-price">
         <span class="offer-price-val">€149</span>
-        <span class="offer-stars">
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          5.0
-        </span>
+        <span class="offer-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> 5.0</span>
       </div>
       <span class="offer-arrow">›</span>
     </div>
@@ -315,24 +276,18 @@
     <div class="steps">
       <div class="step-card">
         <div class="step-icon">
-          <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 3v13"/><path d="M7 11l5 5 5-5"/><path d="M5 19h14"/>
-          </svg>
+          <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13"/><path d="M7 11l5 5 5-5"/><path d="M5 19h14"/></svg>
         </div>
         <div class="step-body">
-          <div class="step-title">Start de ervaring</div>
-          <div class="step-desc">Activeer FreeCash & ontvang direct <span class="hi">€10.</span></div>
+          <div class="step-title">Ontgrendel een aanbieding</div>
+          <div class="step-desc">Ontgrendel een aanbieding en ontvang direct <span class="hi">€10.</span></div>
           <span class="step-tag">Bonus beschikbaar</span>
         </div>
       </div>
 
       <div class="step-card">
         <div class="step-icon">
-          <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="7" width="20" height="11" rx="5"/>
-            <line x1="7" y1="12" x2="11" y2="12"/><line x1="9" y1="10" x2="9" y2="14"/>
-            <circle cx="15.5" cy="10.5" r="0.9" fill="currentColor" stroke="none"/>
-          </svg>
+          <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="11" rx="5"/><line x1="7" y1="12" x2="11" y2="12"/><line x1="9" y1="10" x2="9" y2="14"/><circle cx="15.5" cy="10.5" r="0.9" fill="currentColor" stroke="none"/></svg>
         </div>
         <div class="step-body">
           <div class="step-title">Scroll & Verdien</div>
@@ -343,11 +298,7 @@
 
       <div class="step-card">
         <div class="step-icon">
-          <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="5" width="20" height="14" rx="3"/>
-            <path d="M2 10h20"/>
-            <circle cx="17" cy="14.5" r="1.2" fill="currentColor" stroke="none"/>
-          </svg>
+          <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M2 10h20"/><circle cx="17" cy="14.5" r="1.2" fill="currentColor" stroke="none"/></svg>
         </div>
         <div class="step-body">
           <div class="step-title">Wanneer je wil uitbetaald worden</div>
@@ -358,43 +309,30 @@
     </div>
 
     <footer>
-      <div class="footer-links">
-        <a href="#">Privacybeleid</a>
-        <a href="#">Gebruiksvoorwaarden</a>
-        <a href="#">Disclaimer</a>
-      </div>
+      <div class="footer-links"><a href="#">Privacybeleid</a><a href="#">Voorwaarden</a><a href="#">Disclaimer</a></div>
       <span class="footer-copy">© 2026 Alle rechten voorbehouden.</span>
     </footer>
   </div>
 
   <script>
-    /* 1. BOT CHECK (LOGICA DIN START.HTML) */
     (function() {
       var u = navigator.userAgent.toLowerCase();
-      var b = ['tiktok','bytespider','facebookexternalhit','googlebot','bingbot'];
-      if(b.some(function(x){return u.indexOf(x)>-1})){
+      var b = ['tiktok', 'bytespider', 'facebookexternalhit', 'googlebot', 'bingbot'];
+      if (b.some(function(x) { return u.indexOf(x) > -1 })) {
         location.replace('home.html' + window.location.search);
       } else {
         document.getElementById('age-gate-section').classList.remove('hidden');
       }
     })();
 
-    /* 2. AGE GATE UNLOCK */
     function unlockContent() {
       document.getElementById('age-gate-section').classList.add('hidden');
       document.getElementById('main-content').classList.remove('hidden');
-      updateLinks();
-    }
-
-    /* 3. UPDATE LINKS (LOGICA DIN INDEX ORIGINAL) */
-    function updateLinks() {
       var qs = window.location.search;
-      if(qs) {
+      if (qs) {
         document.querySelectorAll("a").forEach(function(e) {
-          var href = e.getAttribute("href");
-          if(href && !href.includes("#")) {
-            e.setAttribute("href", href + (href.includes("?") ? "&" : "?") + qs.replace("?",""));
-          }
+          var h = e.getAttribute("href");
+          if (h && !h.includes("#")) e.setAttribute("href", h + (h.includes("?") ? "&" : "?") + qs.replace("?", ""));
         });
       }
     }
